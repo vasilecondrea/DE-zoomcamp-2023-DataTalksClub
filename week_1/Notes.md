@@ -1,4 +1,4 @@
-## Watching the docker vide0 1.2.1 ##
+## Watching the docker video 1.2.1 ##
 
 Docker -- platform as a service that uses OS level virtualisation to deliver software in 
             packages called "containers"
