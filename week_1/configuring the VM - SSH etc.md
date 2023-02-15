@@ -24,3 +24,37 @@ but one can use this piece of code as well from the shell
 
 **once the machine is created**
 go to your shell and type `ssh -i ~/.ssh/gcp USERNAME-USED-FOR-SSHKEY@EXTERNAL-IP-ADDRESS-FROM-CLOUD`
+
+**downloand anacoda into the new machine**
+
+**open another terminal and create file "config" in the .ssh folder to access easily you VM on gcloud"**
+
+do `cd .ssh/ 
+touch config
+code config
+`
+in the config file write 
+`
+Host NAME-OF-MACHINE('de-zoomcamp' for this instance)
+    HostName THE-EXTERNAL-IP-OF-VM
+    User THE-NAME-USED-FOR-THE-MACHINE
+    IdentityFile ~/.ssh/gcp`
+
+
+**now you can connect to CGP VM from terminal home directory by typing `ssh de-zoomcamp`** 
+
+**logout** 
+this `logout` logs out from CGP VM
+to reconnect do `ssh de-zoomcamp` (or 'ssh NAME-INSERTED-in-the-config-file')
+
+**check your python**
+`which python
+importa pandas as pd
+pd.__version__` this gives you the version of pandas
+then
+if you do not want to log to python all the time do 
+
+`source .bashrc` - this creates a sort of venv?
+
+
+To work directly on the VM in the cloud install an extension in VS code "remote ssh"
